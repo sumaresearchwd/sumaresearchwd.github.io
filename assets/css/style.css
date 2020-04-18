@@ -1,0 +1,66 @@
+.wrap-suspects{
+	margin-top: 10px;
+	margin-bottom: 100px;
+	height: 100px;
+}
+
+.img-suspect{
+	width: 100px;
+}
+
+.dropable-item {
+	width: 100%; 
+	float: left;
+	position: fixed;
+	bottom: 20px
+	/*height: 500px;*/
+	/*margin: 0 20px;*/
+}
+.on-over{
+	background: #ddd;
+}
+
+#grad1 {
+  
+}
+
+.inner-drop { position: relative; height: 100%;}
+.inner-drop ul { position: absolute; bottom: 0 }
+.inner-drop  li { display: block; list-style: none }
+
+#grad1{
+
+  height: 20px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red , yellow, grey); /* Standard syntax (must be*/
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+}
+#most-likely{
+	float: left;
+	padding-left: 30px;
+	font-weight: bold;
+}
+#least-likely{
+	float: right;
+	padding-right: 30px;
+	font-weight: bold;
+}
+.wrap-btn-confirm{
+	margin-right: 30px;
+	margin-bottom: 10px;
+}
+
+#min-text {
+    width: 50px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+}

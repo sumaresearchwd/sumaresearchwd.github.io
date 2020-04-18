@@ -1,296 +1,119 @@
-<!-- SortableJS CDN -->
-<script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Survey Witness Detection</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel='stylesheet' type='text/css' />
-<link href="styles.css" rel='stylesheet' type='text/css'/>
-</head>
-<body>
-<h1 data-force="40" data-force-y="2.5" style="margin-top:40px;">Survey for Witness Detection: Briefing</h1>
-<p align=center>Welcome to the Witness Detection Survey. Here, we have 7 possible suspects and we ask you to choose who you think is the most likely the culprit from a Rank 1 - 6, 1 being most likely to be the culrpit and 6 being least likely to be the culprit. There is also a No Pick option if you are sure that there is no chance for a certain suspect to be a culprit.</p>
-<div class="container" style="height: 1200px">
-<div data-force="30" class="layer block" style="left: 0%; top: 0%; width: 37%">
-<div class="layer title">Suspects Photos</div>
-<ul id="pg0" class="block__list block__list_tags">
-<li><img src="assets/100x100img1.jpg"/></li>
-<li><img src="assets/100x100img2.jpg"/></li>
-<li><img src="assets/100x100img3.jpg"/></li>
-<li><img src="assets/100x100img4.jpg"/></li>
-</ul>
-</div>
-<div data-force="30" class="layer block" style="left: 30%; top: 0%; width: 37%">
-<div class="layer title">Drag to Ranks</div>
-<ul id="pg1" class="block__list block__list_tags">
-<li><img src="assets/100x100img5.jpg"/></li>
-<li><img src="assets/100x100img6.jpg"/></li>
-<li><img src="assets/100x100none.jpg"/></li>
-</ul>
-</div>
-<div data-force="30" class="layer block" style="left: 60%; top: 0%; width: 37%">
-<div class="layer title">No Pick</div>
-<ul id="nopick" class="block__list block__list_tags">	
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
 
-</ul>
-</div>
-<div data-force="30" class="layer block" style="left: 0%; top: 400px; width: 37%">
-<div class="layer title">Rank 1</div>
-<ul id="rank1" class="block__list block__list_tags">
+  <title>Survey Webpage</title>
 
-</ul>
-</div>
-<div data-force="30" class="layer block" style="left: 40%; top: 400px; width: 37%">
-<div class="layer title">Rank 2</div>
-<ul id="rank2" class="block__list block__list_tags">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-</ul>
-</div>
-<div data-force="30" class="layer block" style="left: 80%; top: 400px; width: 37%">
-<div class="layer title">Rank 3</div>
-<ul id="rank3" class="block__list block__list_tags">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-</ul>
-</div>
-<div data-force="30" class="layer block" style="left: 0%; top: 700px; width: 37%">
-<div class="layer title">Rank 4</div>
-<ul id="rank4" class="block__list block__list_tags">
-
-</ul>
-</div>
-<div data-force="30" class="layer block" style="left: 40%; top: 700px; width: 37%">
-<div class="layer title">Rank 5</div>
-<ul id="rank5" class="block__list block__list_tags">
-
-</ul>
-</div>
-<div data-force="30" class="layer block" style="left: 80%; top: 700px; width: 37%">
-<div class="layer title">Rank 6</div>
-<ul id="rank6" class="block__list block__list_tags">
-
-</ul>
-</div>
-</div>
-<script src="Sortable.js"></script> 
-<script>
-		(function (){
-			var console = window.console;
-
-			if( !console.log ){
-				console.log = function (){
-					alert([].join.apply(arguments, ' '));
-				};
-			}
-
-			new Sortable(pg0, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.pg0:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.pg0:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.pg0:', evt.item); }
-			});
-
-			new Sortable(pg1, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.pg1:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.pg1:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.pg1:', evt.item); }
-			});
-
-			new Sortable(nopick, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.nopick:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.nopick:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.nopick:', evt.item); }
-			});
-
-			new Sortable(rank1, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.rank1:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.rank1:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.rank1:', evt.item); }
-			});
-
-			new Sortable(rank2, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.rank2:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.rank2:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.rank2:', evt.item); }
-			});
-
-			new Sortable(rank3, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.rank3:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.rank3:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.rank3:', evt.item); }
-			});
-
-			new Sortable(rank4, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.rank4:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.rank4:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.rank4:', evt.item); }
-			});
-
-			new Sortable(rank5, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.rank5:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.rank5:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.rank5:', evt.item); }
-			});
-
-			new Sortable(rank6, {
-				group: "words",
-				onAdd: function (evt){ console.log('onAdd.rank6:', evt.item); },
-				onUpdate: function (evt){ console.log('onUpdate.rank6:', evt.item); },
-				onRemove: function (evt){ console.log('onRemove.rank6:', evt.item); }
-			});
-
-			new Sortable(multi, {
-				draggable: '.tile',
-				handle: '.tile__name'
-			});
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
-			[].forEach.call(multi.getElementsByClassName('tile__list'), function (el){
-				new Sortable(el, { group: 'photo' });
-			});
-		})();
+<link rel="stylesheet" href="assets/css/style.css" >
+
+<script type="text/javascript" src="assets/js/base.js"></script>
+<script type="text/javascript" src="assets/js/modules/suspect.js"></script>
+ 
 
 
 
-		// Background
-		document.addEventListener( "DOMContentLoaded", function (){
-			function setNoiseBackground(el, width, height, opacity){
-				var canvas = document.createElement("canvas");
-				var context = canvas.getContext("2d");
-
-				canvas.width = width;
-				canvas.height = height;
-
-				for( var i = 0; i < width; i++ ){
-					for( var j = 0; j < height; j++ ){
-						var val = Math.floor(Math.random() * 255);
-						context.fillStyle = "rgba(" + val + "," + val + "," + val + "," + opacity + ")";
-						context.fillRect(i, j, 1, 1);
-					}
-				}
-
-				el.style.background = "url(" + canvas.toDataURL("image/jpg") + ")";
-			}
-
-			setNoiseBackground(document.getElementsByTagName('body')[0], 50, 50, 0.02);
-		}, false );
-	</script> 
-
-<!-- Parallax --> 
-<script>
-		(function (){
-			var x, y, reqAnimFrame = window.requestAnimationFrame || function (fn){ setTimeout(fn, 100/60); };
-
-			var items = [].slice.call(document.querySelectorAll('.layer')).map(function (el){
-				var rect = el.getBoundingClientRect();
-				el.x = rect.left;
-				el.y = rect.top;
-				el.w = rect.right - rect.left;
-				el.h = rect.bottom - rect.top;
-				el.fX = el.getAttribute('data-force-x') || el.getAttribute('data-force') || 10;
-				el.fY = el.getAttribute('data-force-y') || el.getAttribute('data-force') || 10;
-				return el;
-			});
 
 
-			document.addEventListener('dragover', function (evt){
-				x = evt.clientX;
-				y = evt.clientY;
-			}, false);
+  </head>
+  <body>
+  	<div class=" " style="">
+	  	<div class="col-md-10 col-md-offset-1 wrap-suspects">
+	  		<div class="suspect-item col-md-2"><img data-id="1" class="img-rounded img-suspect"  src="assets/images/img1.jpg"></div>
+	  		<div class="suspect-item col-md-2 "><img data-id="2" class="img-rounded img-suspect"  src="assets/images/img2.jpg"></div>
+	  		<div class="suspect-item col-md-2"><img data-id="3" class="img-rounded img-suspect"  src="assets/images/img3.jpg"></div>
+	  		<div class="suspect-item col-md-2"><img data-id="4" class="img-rounded img-suspect"  src="assets/images/img4.jpg"></div>
+	  		<div class="suspect-item col-md-2"><img data-id="5" class="img-rounded img-suspect"  src="assets/images/img5.jpg"></div>
+	  		<div class="suspect-item col-md-2"><img data-id="6" class="img-rounded img-suspect"  src="assets/images/img6.jpg"></div>
+	  	</div>
+      <div style="clear: both"></div>
+      <div class="pull-right wrap-btn-confirm"><button disabled="disabled" type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#confirm-modal">
+  Confirm
+</button></div>
+  	</div>
+     <div style="clear: both"></div>
+     
+
+  	<div id="dropable-wrap">
+  		<div class="dropable-item" data-likely="1"><div class="inner-drop"><ul></ul></div></div>
+      <!-- <div class="dropable-item" data-likely="2"><div class="inner-drop"><ul></ul></div></div>
+      <div class="dropable-item" data-likely="3"><div class="inner-drop"><ul></ul></div></div>
+      <div class="dropable-item" data-likely="4"><div class="inner-drop"><ul></ul></div></div>
+      <div class="dropable-item" data-likely="5"><div class="inner-drop"><ul></ul></div></div>
+      <div class="dropable-item" data-likely="6"><div class="inner-drop"><ul></ul></div></div> -->
+
+      
+  		
+  	</div>
+    <div id="grad1"><span id="most-likely">Most Likely</span><span id="least-likely">Least Likely</span></div>
 
 
-			document.addEventListener('mousemove', function (evt){
-				x = evt.clientX;
-				y = evt.clientY;
-			}, false);
+   <div class="modal fade" id="confirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>How confident are you about your most likely choice?</p>
+              <div id="slider-cf"></div>
+              <span id="min-text"></span>
+
+              <div class="" style="height: 20px"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary btn-confirm">Confirm</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Image</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row list-image-modal">
+                  
+              </div>
+
+              <div class="" style="height: 20px"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
 
 
-			(function _loop(){
-				if( x && y ){
-					var winWidth = window.innerWidth;
-					var winHeight = window.innerHeight;
-					var halfWidth = winWidth / 2;
-					var halfHeight = winHeight / 2;
+  <script type="text/javascript">
+  	(function ($, app) {
 
-					var rx = x - winWidth/2;
-					var ry = winHeight/2 - y;
 
-					items.forEach(function (el){
-						var dx = el.w/el.fX * (rx / -halfWidth);
-						var dy = el.h/el.fY * (ry / halfHeight);
-						el.style['transform'] =
-						el.style['-webkit-transform'] = 'translate('+dx+'px,'+dy+'px)';
-					});
-				}
+  		 app.getCls('suspect').init();
 
-				reqAnimFrame(_loop);
-			})();
-		})();
-	</script> 
-
-<!-- highlight.js -->
-<style>
-		/* Tomorrow Theme */
-		/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-		/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-		/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-		.tomorrow-comment, pre .comment, pre .title {
-		  color: #8e908c;
-		}
-
-		.tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
-		  color: #c82829;
-		}
-
-		.tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
-		  color: #f5871f;
-		}
-
-		.tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
-		  color: #eab700;
-		}
-
-		.tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
-		  color: #718c00;
-		}
-
-		.tomorrow-aqua, pre .css .hexcolor {
-		  color: #3e999f;
-		}
-
-		.tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
-		  color: #4271ae;
-		}
-
-		.tomorrow-purple, pre .keyword, pre .javascript .function {
-		  color: #8959a8;
-		}
-
-		pre {
-			border: 0;
-			background-color: #fff;
-		}
-
-		pre code {
-		  display: block;
-		  color: #4d4d4c;
-		  font-size: 15px;
-		  font-family: Menlo, Monaco, Consolas, monospace;
-		  line-height: 1.5;
-		  padding: 30px;
-		}
-	</style>
-<script src="https://yandex.st/highlightjs/7.5/highlight.min.js"></script> 
-<script>hljs.initHighlightingOnLoad();</script> 
-</body>
+  	})($, $.app);
+  </script>
 </html>
